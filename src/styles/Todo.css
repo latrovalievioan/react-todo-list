@@ -1,0 +1,12 @@
+.todoLabel {
+    display: flex;
+    align-items: center;
+    margin: 7px;
+    border-bottom: 1px solid black;
+    font-size: 23px;
+}
+.todo-name{
+    margin-left: 10px;
+}
+
+

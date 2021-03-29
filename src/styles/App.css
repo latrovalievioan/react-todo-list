@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(22, 15, 39);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .title {
+    border-bottom: 3px solid black;
+    font-size: 60px;
+}
+
+#app  {
+    background: linear-gradient(307deg, rgba(198,135,188,0.7483368347338936) 0%, rgba(48,123,212,0.6895133053221288) 100%);
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 3px solid wheat;
+    min-height: 500px;
+    min-width: 500px;
+    border-radius: 40px;
+}
+
+.left-todo {
+    position: relative;
+    left: 150px;
+}
+
+.add-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}

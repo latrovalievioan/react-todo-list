@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import TodoList from "./components/TodoList";
 import uuidv4 from "../node_modules/uuid/dist/v4";
+import "./styles/App.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -39,13 +40,22 @@ function App() {
   };
 
   return (
-    <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <input ref={todoNameRef} type="text" />
-      <button onClick={handleAddTodo}>Add Todo</button>
-      <button onClick={handleClearTodos}>Clear Completed</button>
-      <div>{todos.filter((todo) => !todo.completed).length} left to do</div>
-    </>
+    <div id="app">
+      <h1 className="title">Todo List</h1>
+      <div className="todo-list">
+        <TodoList todos={todos} toggleTodo={toggleTodo} />
+      </div>
+      <div className="left-todo">
+        {todos.filter((todo) => !todo.completed).length} left to do
+      </div>
+      <div className="add-todo">
+        <input ref={todoNameRef} type="text" />
+        <div className="buttons">
+          <button onClick={handleAddTodo}>Add Todo</button>
+          <button onClick={handleClearTodos}>Clear Completed</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
